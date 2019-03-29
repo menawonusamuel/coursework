@@ -1,3 +1,10 @@
+body, html {
+    height: 100%;
+    background-image: url("../Asset/Image/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .wrapper{
     position: relative;
     min-height: 100%;
@@ -45,7 +52,7 @@ input[type=email], input[type=password]{
     display: inline-block;
     height:36px;
     width:300px;
-    box-sizing: border-box
+    box-sizing: border-box;
     font-size: 14px;
     text-align: center;
     overflow: hidden;
@@ -56,14 +63,13 @@ input[type=email], input[type=password]{
 input[type=submit]{
     height:36px;
     width:308px;
-    box-sizing: border-box
+    box-sizing: border-box;
     font-size: 26px;
     text-align: center;
     background-color: teal;
     color:white;
     margin-bottom: 5px;
     font-family: Arial, sans-serif;
-    font-weight:36px;
     padding: 0 8px;
     margin-top: 5px;
     line-height: 36px;
@@ -77,13 +83,12 @@ input[type=email]:hover, input[type=password]:hover{
 select{
     height:36px;
     width:308px;
-    box-sizing: border-box
+    box-sizing: border-box;
     font-size: 26px;
     text-align: center;
     color:white;
     margin-bottom: 5px;
     font-family: Arial, sans-serif;
-    font-weight:36px;
     padding: 0 8px;
     margin-top: 5px;
     line-height: 36px;

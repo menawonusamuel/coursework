@@ -1,13 +1,13 @@
-<?php session_start();?>
+<?php
+session_start();?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>PROJECT RESEARCH PAPER SHARING</title>
     <meta charset="UTF-8">
-    <meta content="width=300, initial-scale=1" name="viewport">
     <meta name="description" content="Project Research Paper Sharing Site">
-    <title>PROJECT RESEARCH PAPER SHARING</title>
+    <title>WELCOME TO PROJECT RESEARCH PAPER SHARING</title>
     <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="unsemantic-grid-responsive-tablet.css">
 </head>
 <body>
     <div class="wrapper">
@@ -16,8 +16,8 @@
             <div></div>
             <div class="container">
                 <hgroup>
-                    <h1>Project Research Paper Sharing</h1>
-                    <h3>Sign in</h3>
+                    <h1>Research Paper Sharing Application</h1>
+                    <h3>Making your Research work easy</h3>
                 </hgroup>
             </div>
         </div>

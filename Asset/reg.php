@@ -16,8 +16,8 @@
         </div></div>
     <div class="container">
         <hgroup>
-            <h1>One Account, then research</h1>
-            <h3>Add to Streaak</h3>
+            <h1>Research Papers</h1>
+            <h3>Registration Page</h3>
         </hgroup>
     </div>
 </div>
