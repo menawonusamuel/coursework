@@ -1,0 +1,116 @@
+
+body, html {
+    height: 100%;
+    background-image: url("../Image/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    float: right;
+    background:teal;
+    width: 60%;
+}
+nav li{
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    font-size: 33.7px;
+    text-align: center;
+    top: 10px;
+    margin:5px 0px 4px 70px;
+    float: left;
+}
+nav li:hover{
+    background: black;
+    color: transparent;
+    text-decoration: none;
+    font-family: "Aharoni";
+}
+.container h1{
+    float: left;
+    margin-right: 5px;
+}
+.container{
+    width: 20%;
+    position: absolute;
+    height: 48px;
+    width: 100%;
+    background-color: orange;
+    float: left;
+
+}
+h1{
+    font-size: 35px;
+
+    font-family: Aharoni sans;
+    color: white;
+    margin:5px 0px 4px 70px;
+
+}
+.main{
+    padding: 5em;
+}
+.cont{
+    border: solid 10px teal;
+    margin-bottom: 3em;
+    background-color: white;
+    cursor: pointer;
+}
+.contt{
+    height: 130px;
+    width: 22%;
+    margin:15px;
+    background-color: blue;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.word{
+    position: relative;
+    font-size: xx-large;
+    font-family: Aharoni;
+    cursor: pointer;
+}
+.body{
+    border: 10px solid grey;
+    width: 19%;
+    margin-right:1em;
+    float:left;
+    color:yellow;
+    background: black;
+    font-size: 16px;
+    font-family: "Aharoni";
+}
+.content{
+    border: 10px solid black;
+    width: 76.2%;
+    float: left;
+    background-image: url("../Image/a.jpeg");
+}
+img{
+
+    padding: 2px;
+    width:100%;
+}
+.footer{
+    background: transparent;
+    height: 30px;
+    width: 100%;
+
+}
+.footer p{
+    margin-top: 10px;
+}
+.footer h1{
+    color:blue;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    margin: 15px;
+    font-size: 25px;
+}

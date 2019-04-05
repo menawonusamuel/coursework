@@ -9,17 +9,18 @@ $email=$_POST['email'];
 $uname=$_POST['uname'];
 $pwd=$_POST['pwd'];
 $actor=$_POST['actor'];
+$grp=$_POST['grp'];
 
-$db_select=mysqli_select_db($db, "db1813617_coursework");
 if(!$db_select){
     echo"Database selection failed";
 }
-$sql= "INSERT INTO student(firstname, lastname, address, postcode, email, username, password, actor)
- VALUES ('$fname', '$lname', '$addr', '$pstcde', '$email', '$uname', '$pwd', '$actor')";
+$sql= "INSERT INTO student(firstname, lastname, address, postcode, email, username, password, actor, group_id) VALUES ('$fname', '$lname', '$addr', '$pstcde', '$email', '$uname', '$pwd', '$actor', '$grp')";
 $query=mysqli_query($db,$sql);
 if (!$query) {
     die("Database query failed");
-    $_SESSION['student'] = $uname;
-    header('location : ../login.php');
 }
+$_SESSION['student'] = $uname;
+header("Location:adstud.php");
+mysqli_close($db);
 ?>
+
