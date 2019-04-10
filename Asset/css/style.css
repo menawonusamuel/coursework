@@ -1,0 +1,79 @@
+body{
+    background-image: url("../Image/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrap{
+    position: relative;
+    height:100%;
+    margin: 2%;
+    padding: 3%;
+    background-color: aquamarine;
+}
+.container{
+    width:100%;
+    height:20px;
+    background-color: azure;
+    padding-top: 2em;
+}
+.space{
+    height: 0.5em;
+    width:100%;
+}
+.nav{
+    width:15%;
+    background-color: azure;
+    float: left;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    height:100%;
+}
+.content{
+    width: 70%;
+    float: left;
+    background-color: brown;
+    padding-top: 3em;
+    height:100%;
+}
+.splashscreen{
+    width:90%;
+    height: 10%;
+    padding:auto;
+    margin:auto;
+}
+.heading{
+    background-color: azure;
+    width:80%;
+    margin: auto;
+
+}
+
+.footer{
+    position: absolute;
+    margin: auto;
+    padding: 2em;
+    width: 100%;
+    bottom:0px;
+    background-color: aquamarine;
+}
+h2{
+    float: left;
+}
+p{
+    float: right;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+p{
+    cursor: pointer;
+    box-shadow: 0 9px grey;
+    font-family:"Aharoni";
+}
+p:hover{ background-color: teal; }
+p a:active{
+    background-color: olive;
+    box-shadow: 0 5px grey;
+    transform: translateY(4px);
+}

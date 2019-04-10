@@ -10,7 +10,7 @@ require("header.php");
     <?php
     $sqli="Select * from topic";
     $query=mysqli_query($db,$sqli);
-    if (!$sqli) {
+    if ($query===false) {
         die("Database query failed" .mysqli_error());
     }?>
     <h3>Group topic:</h3>
