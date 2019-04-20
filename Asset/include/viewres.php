@@ -1,35 +1,95 @@
-<?php require_once("connection.php");
-require("adheader2.php");
+<?php
+session_start();?>
+<?php require_once("connection.php");?>
+<?php include_once("heading.php");?>
+    <li> <div class="dropdown">
+            <button class="dropbtn">Students</button>
+            <div class="dropdown-content">
+                <a href="adstud.php?stud=1">Add Student</a>
+                <a href="adstud.php?stud=2">View Students</a>
+                <a href="adstud.php?stud=3">Delete Student</a>
+                <a href="adstud.php?stud=4">Update Student</a>
+            </div>
+        </div></li>
+    <li> <div class="dropdown">
+            <button class="dropbtn">Groups</button>
+            <div class="dropdown-content">
+                <a href="adgrp.php?grp=1">Add Group</a>
+                <a href="adgrp.php?grp=2">View Groups & Team Leaders</a>
+                <a href="adgrp.php?grp=3">Delete Group & Tem leader</a>
+                <a href="adgrp.php?grp=4">Update Group & Team leader</a>
+            </div>
+        </div></li>
+    <li> <div class="dropdown">
+            <button class="dropbtn">Research papers</button>
+            <div class="dropdown-content">
+                <a href="adres.php?top=1">Add Topic</a>
+                <a href="adres.php?top=2">View Topic </a>
+                <a href="adres.php?top=3">Delete Topic </a>
+                <a href="adres.php?top=4">Update Topic</a>
+                <a href="adres.php?res=1">Add research paper</a>
+                <a href="adres.php?res=2">View research papers</a>
+                <a href="adres.php?res=3">Delete research papers</a>
+                <a href="adres.php?res=4">Update research papers</a>
+            </div>
+        </div></li>
+    <li><a href="adres.php?top=2">Go back</a></li>
+    </ul>
+    </nav>
+    </div>
+    </header>
+<?php
 $gn=$_POST['gn'];
 $id=$_POST['id'];
-if(!$db_select){
-    echo"Database selection failed";
-}
+
 if (isset($_POST['submit']) && (empty($gn)&& (empty($id) ))){
     $sq="Select * from topic Order by topic_id ASC";
-    $que=mysqli_query($conn,$sq);
+    $que=mysqli_query($db,$sq);?>
+    <section id="main">
+    <div class="container">
+    <article id="main-col">
+    <h1 class="page-title">List of groups</h1>
+    <ul id="services">
+    <li>
+    <?php
     print("<h2><font color=Blue>List of topics: No record entered</font></h2>");
     print" 
- <table border>
+ <table >
  	<tr><b><Th>S/N</Th><Th>Topic</Th>";
     while ($rows = mysqli_fetch_array($que)){
         print "<tr><td>" . $rows[0]. "</td>" . "<td>" . $rows[1] . "</td>"  . "</tr>";
 
     }
 }else{
-    $sql="Select * from topic Where((name='$gn') OR (topic_id='$id'))";
-    $query=mysqli_query($conn,$sql);
+    $sql="Select * from topic Where name='$gn' OR topic_id='$id' ";
+    $query=mysqli_query($db,$sql);
     if (!$query) {
         die("Database query failed");
-    }
-    print("<h2><font color=Blue>List of topics</font></h2>");
-    print"
- <table border>
+    }if(mysqli_num_rows($query)==0){?>
+        <section id="main">
+        <div class="container">
+        <article id="main-col">
+        <h1 class="page-title">List of topics</h1>
+        <ul id="services">
+        <li><?php
+        echo"Record not found";
+    }else{?>
+        <section id="main">
+            <div class="container">
+                <article id="main-col">
+                    <h1 class="page-title">List of groups</h1>
+                    <ul id="services">
+                        <li>
+        <?php
+        print("<h2><font color=Blue>List of topics</font></h2>");
+        print"
+ <table >
  	<tr><b><Th>S/N</Th><Th>Topic</Th>";
-    while ($rows = mysqli_fetch_array($query)){
+        while ($rows = mysqli_fetch_array($query)){
 
-        print "<tr><td>" . $rows[0]. "</td>" . "<td>" . $rows[1] . "</td>"  . "</tr>";
+            print "<tr><td>" . $rows[0]. "</td>" . "<td>" . $rows[1] . "</td>"  . "</tr>";
 
-    }
-}echo "<p><a href=adres.php>Go back</a></p>";
+        }
+    }echo "<p><a href=adres.php?top=2>Go back</a></p>";
+}
 ?>
